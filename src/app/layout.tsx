@@ -5,6 +5,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import MetaPixel from '@/components/MetaPixel';
 import StructuredData from '@/components/StructuredData';
+import ExitIntentPopup from '@/components/ExitIntentPopup';
 import WhatsAppFAB from '@/components/WhatsAppFAB';
 
 const playfair = Playfair_Display({
@@ -34,6 +35,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <MetaPixel />
         <StructuredData />
+        <ExitIntentPopup />
         <Navbar />
         <main>{children}</main>
         <Footer />
