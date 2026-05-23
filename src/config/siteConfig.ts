@@ -8,5 +8,5 @@ export const siteConfig = {
     url: 'https://images.pexels.com/photos/29355317/pexels-photo-29355317/free-photo-of-colorful-african-fabric-pattern-in-close-up.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&fit=crop',
     alt: 'Premium lace fabric close-up',
   },
-  whatsappNumber: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '234XXXXXXXXXX',
+  whatsappNumber: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '2348123747783',
 };

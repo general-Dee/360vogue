@@ -24,7 +24,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li className="flex items-center justify-center md:justify-start gap-2"><MessageCircle className="w-4 h-4 text-wa-green" /> WhatsApp Only</li>
               <li className="flex items-center justify-center md:justify-start gap-2"><Mail className="w-4 h-4" /> hello@360vogue.ng</li>
-              <li className="flex items-center justify-center md:justify-start gap-2"><MapPin className="w-4 h-4 text-vogue-gold" /> Lagos, Nigeria</li>
+              <li className="flex items-center justify-center md:justify-start gap-2"><MapPin className="w-4 h-4 text-vogue-gold" /> Central Market, Kaduna, Nigeria</li>
             </ul>
           </div>
           <div>
