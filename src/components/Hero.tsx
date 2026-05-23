@@ -2,12 +2,12 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Users, Truck, Shield, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { WHATSAPP_NUMBER } from '@/lib/data';
+import { siteConfig } from '@/config/siteConfig';
 
 export default function Hero() {
   const headline = "Wear the Fabric. Own the Room.";
   const words = headline.split(' ');
-  const whatsappLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('Hi 360 VOGUE, I want to shop the latest collection. Please show me what fabrics you have.')}`;
+  const whatsappLink = `https://wa.me/${siteConfig.whatsappNumber}?text=${encodeURIComponent('Hi 360 VOGUE, I want to shop the latest collection.')}`;
 
   const trustBadges = [
     { icon: Users, text: '1,200+ Happy Customers', color: 'text-vogue-gold' },
@@ -20,7 +20,7 @@ export default function Hero() {
       <div
         className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('https://picsum.photos/id/104/1600/900')",
+          backgroundImage: `url('${siteConfig.heroImage.url}')`,
           filter: 'brightness(0.35)',
         }}
       />
@@ -57,7 +57,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1, duration: 0.5 }}
-              className="inline-block text-4xl sm:text-6xl md:text-7xl font-heading font-bold text-white tracking-tight"
+              className="inline-block text-4xl sm:text-6xl md:text-7xl font-heading font-bold text-white tracking-tight hero-text-shadow"
             >
               {word}
             </motion.span>
@@ -67,7 +67,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 0.6 }}
-          className="text-white/90 text-lg sm:text-xl md:text-2xl max-w-2xl mx-auto mb-8 font-body"
+          className="text-white/90 text-lg sm:text-xl md:text-2xl max-w-2xl mx-auto mb-8 font-body hero-text-shadow"
         >
           Premium Nigerian fabrics — Ankara, Lace, Aso-Oke, and luxury prints delivered to your doorstep
         </motion.p>
@@ -90,7 +90,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 0.5 }}
-          className="mt-6 flex flex-wrap justify-center gap-4 text-white/70 text-sm"
+          className="mt-6 flex flex-wrap justify-center gap-4 text-white/70 text-sm hero-text-shadow"
         >
           <div className="flex items-center gap-1"><Star className="w-4 h-4 fill-vogue-gold text-vogue-gold" /> Rated 4.8/5 from 1,200+ reviews</div>
           <div>•</div>

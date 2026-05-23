@@ -9,9 +9,11 @@ module.exports = {
     extend: {
       colors: {
         vogue: {
-          dark: '#0A0A0A',
-          gold: '#C9A84C',
-          'gold-light': '#E0C56E',
+          dark: '#1a1a1a',      // Deep charcoal instead of pure black
+          gold: '#D4AF37',      // Warmer, more elegant gold
+          'gold-light': '#E8D5A3',
+          cream: '#F5F0E8',     // Soft background tone
+          burgundy: '#8B2C2D',  // Accent for urgency/sale
         },
         wa: {
           green: '#25D366',

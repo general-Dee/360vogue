@@ -20,6 +20,9 @@ const featuredProducts = [
   { id:4, name:'Chiffon Solid', price:'₦3,200/yard', yards:'per yard', badge:'New arrival', image:placeholderImg },
   { id:5, name:'George Wrapper', price:'₦55,000', yards:'Full wrapper', badge:'Trending', image:placeholderImg },
   { id:6, name:'Satin Print', price:'₦4,800/yard', yards:'per yard', badge:'Limited', image:placeholderImg },
+  { id:7, name:'Velvet Ankara', price:'₦6,500/yard', yards:'per yard', badge:'Premium', image:placeholderImg },
+  { id:8, name:'Sequined Lace', price:'₦55,000', yards:'5 yards set', badge:'Limited', image:placeholderImg },
+  { id:9, name:'Broken George', price:'₦65,000', yards:'Full wrapper', badge:'Trending', image:placeholderImg },
 ];
 
 export default function FeaturedCollection() {
@@ -44,7 +47,7 @@ export default function FeaturedCollection() {
             const msg = `Hi 360 VOGUE, I want to order ${product.name} (${product.price}) - ${product.yards}`;
             const waLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
             return (
-              <Card key={product.id} className="group overflow-hidden border-0 shadow-lg hover:shadow-2xl transition">
+              <Card key={product.id} className="group overflow-hidden border-2 border-gray-100 bg-white rounded-2xl shadow-sm hover:shadow-xl hover:border-vogue-gold transition-all duration-300">
                 <div className="relative aspect-[4/5] overflow-hidden">
                   <Image src={product.image} alt={product.name} fill className="object-cover group-hover:scale-105 transition" unoptimized />
                   <Badge className="absolute top-4 left-4 bg-vogue-gold text-white">{product.badge}</Badge>

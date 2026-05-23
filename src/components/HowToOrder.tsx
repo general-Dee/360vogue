@@ -12,7 +12,7 @@ const steps = [
 export default function HowToOrder() {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.2 });
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
+    <section className="py-20 bg-white">
       <div className="container px-4 mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-heading font-bold text-vogue-dark mb-3">How to Order — 3 Simple Steps</h2>

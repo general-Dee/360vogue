@@ -21,13 +21,15 @@ export default function Navbar() {
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-4 py-3 ${
-        scrolled ? 'bg-white/90 backdrop-blur-md shadow-md' : 'bg-transparent'
+        scrolled 
+          ? 'bg-white/95 backdrop-blur-md shadow-md border-b border-gray-100' 
+          : 'bg-white/80 backdrop-blur-sm border-b border-gray-100/50'
       }`}
     >
       <div className="container mx-auto flex items-center justify-between">
         <motion.h1
           whileHover={{ scale: 1.02 }}
-          className="text-2xl font-heading font-bold tracking-tight"
+          className="text-2xl font-heading font-bold tracking-tight text-vogue-dark"
         >
           360<span className="text-vogue-gold">VOGUE</span>
         </motion.h1>
@@ -37,6 +39,7 @@ export default function Navbar() {
             target="_blank"
             rel="noopener noreferrer"
             className="text-wa-green hover:text-wa-green-dark transition-colors"
+            aria-label="Chat on WhatsApp"
           >
             <MessageCircle className="w-5 h-5" />
           </a>

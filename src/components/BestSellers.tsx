@@ -12,6 +12,10 @@ const placeholderImg = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/
 const bestSellers = [
   { name:'French Lace', price:'₦38,000', image:placeholderImg, stock:'Only 3 sets left' },
   { name:'Gold Lace Ankara', price:'₦5,200/yard', image:placeholderImg, stock:'15 yards left' },
+  { name:'Premium Velvet', price:'₦7,500/yard', image:placeholderImg, stock:'Limited stock' },
+  { name:'Royal Aso-Oke', price:'₦85,000', image:placeholderImg, stock:'5 sets available' },
+  { name:'Crystal Lace', price:'₦49,000', image:placeholderImg, stock:'Selling fast' },
+  { name:'Embroidered Satin', price:'₦6,800/yard', image:placeholderImg, stock:'Restocking soon' },
 ];
 
 export default function BestSellers() {
@@ -24,12 +28,12 @@ export default function BestSellers() {
         <div className="w-20 h-1 bg-vogue-gold mx-auto mb-12"></div>
         <div className="relative">
           <div className="overflow-hidden" ref={emblaRef}>
-            <div className="flex gap-6">
+            <div className="flex gap-8 px-4">
               {bestSellers.map((item,idx) => {
                 const msg = `Hi 360 VOGUE, I want to order ${item.name} (${item.price}) - ${item.stock}`;
                 const waLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
                 return (
-                  <div key={idx} className="flex-[0_0_280px] bg-white rounded-2xl overflow-hidden text-black">
+                  <div key={idx} className="flex-[0_0_300px] bg-white rounded-2xl overflow-hidden text-black">
                     <div className="relative aspect-[4/5]"><Image src={item.image} alt={item.name} fill className="object-cover" unoptimized /></div>
                     <div className="p-4">
                       <h3 className="font-bold">{item.name}</h3>

@@ -15,12 +15,12 @@ const categories = [
 
 export default function Categories() {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
-  const handleClick = (cat) => {
+  const handleClick = (cat: string) => {
     const msg = 'Hi 360 VOGUE, I am interested in your ' + cat + ' collection. Please show me what you have.';
     window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`, '_blank');
   };
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
+    <section className="py-20 bg-white">
       <div className="container px-4 mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-5xl font-heading font-bold text-vogue-dark mb-3">Shop by Category</h2>
